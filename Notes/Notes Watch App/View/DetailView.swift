@@ -15,11 +15,19 @@ struct DetailView: View {
     @State private var isCreditsPresented: Bool = false
     @State private var isSettingsPresented: Bool = false
     
+
+
     var body: some View {
         VStack(alignment: .center, spacing: 3) {
+            HStack {
+                Capsule()
+                    .frame(height: 1)
+                Image(systemName: "note.text")
+                Capsule()
+                    .frame(height: 1)
+            }
+            .foregroundStyle(.accent)
             
-            HeaderView(title: "")
-
             Spacer()
             
             ScrollView(.vertical) {
